@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 28</title>
+</head>
+
+<body>
+
+    <!--
+Ми хотіли б отримати масив ключів map.keys() в змінну і далі працювати з ними, наприклад застосувати метод .push.
+
+Але це не виходить:
+
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = map.keys();
+
+// Error: keys.push is not a function
+// Помилка: keys.push - це не функція
+keys.push("more");
+
+Чому? Що потрібно виправити в коді, щоб виклик keys.push спрацював?
+    -->
+
+    <script>
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+keys.push("more");
+
+console.log(keys);
+
+    </script>
+
+</body>
+
+</html>
